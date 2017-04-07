@@ -10,7 +10,8 @@
     var a2=document.getElementById("kast2").value;
     var a3=document.getElementById("kast3").value;
     var aadress="/arvutaKiirus?s="+a1+"&h="+a2+"&m=a3";
-
+    yhendus.open("GET", aadress, true);
+    yhendus.send();
   }
   function andmedSaabusid(){
     document.getElementById("vastus").innerHTML=yhendus.responseText;
