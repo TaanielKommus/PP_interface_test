@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class Aplikatsioon{
 
-	@RequestMapping("/arvutaKiirus")
+	//@RequestMapping("/arvutaKiirus")
 	public String arvutaKiirus(double s, double h, double m){
 		Keskminekiirus kiiruseArvutaja=new Keskminekiirus();
 		return kiiruseArvutaja.f(s,h,m);
