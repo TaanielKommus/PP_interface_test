@@ -7,7 +7,7 @@ public class Keskminekiirus implements Funktsioon{
 
 		v = Math.round(s/t);
 
-			return "Keskminekiirus "+ v +" kmh";
+			return "Keskmine kiirus oli "+ v +" km/h";
 
 	}
 

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Keskmine kiirus</title>
+  <script>
+  var yhendus=new XMLHttpRequest();
+  yhendus.onreadystatechange=andmedSaabusid;
+  function arvutamine(){
+    var a1=document.getElementById("kast1").value;
+    var a2=document.getElementById("kast2").value;
+    var a3=document.getElementById("kast3").value;
+    var aadress="/arvutakiirus?s="+a1+"&h="+a2+"&m=a3";
+
+  }
+  function andmedSaabusid(){
+    document.getElementById("vastus").innerHTML=yhendus.responseText;
+  }
+  </script>
+</head>
+
+  <body>
+    <h3>Keskmise kiiruse arvutaja</h3>
+    <p>
+    Sisesta vahemaa ja sõidule kulunud aeg ning näed oma keskmist kiirust.
+    </p>
+    Vahemaa(km): <input type="number" id="kast1">
+    Tunnid: <input type="number" id="kast2">
+    Minutid: <input type="number" id="kast3"><br><br>
+    <input type="button" value="Näita keskmine kiirus" onclick="arvutamine()">
+    <div id="vastus">...</div>
+  </body>
+</html>
